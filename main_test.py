@@ -1,5 +1,6 @@
 import unittest
 import main
+import xmlrunner
 
 class MyTestCase(unittest.TestCase):
     def test_message(self):
@@ -9,4 +10,7 @@ class MyTestCase(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    with open('test-results.xml', 'wb') as output:
+        unittest.main(
+            testRunner=xmlrunner.XMLTestRunner(output=output),
+            failfast=False, buffer=False, catchbreak=False)
