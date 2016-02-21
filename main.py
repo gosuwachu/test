@@ -1,6 +1,6 @@
 class Printer:
     def __init__(self, text):
-        self.text = text
+        self.text = text+"as"
 
     def do_print(self):
         print(self.text)
