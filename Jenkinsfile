@@ -3,5 +3,6 @@ node {
     sh 'pwd'
 }
 node {
+    input 'Ready?'
     sh 'python main_test.py'
 }
